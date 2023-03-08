@@ -61,3 +61,5 @@ public class Diameter_of_Tree {
         System.out.println("So the max diameter of the tree is "+Diameter(root));
     }
 }
+
+//O(n^2)
