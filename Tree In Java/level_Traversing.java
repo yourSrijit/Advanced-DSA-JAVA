@@ -26,30 +26,30 @@ public class level_Traversing {
         return new_node;
     }
     public static void levelOrder(Node root){
-        if(root==null){
+        if(root ==null){
             return;
         }
-        Queue<Node> q=new LinkedList<Node>();
+        Queue<Node> q =new LinkedList<>();
         q.add(root);
         q.add(null);
-        while (!q.isEmpty()){
-            Node cur=q.remove();
-            if(q==null){
-                System.out.println();
-                if(!q.isEmpty()){
+        while(!q.isEmpty()){
+            Node curr =q.remove();
+            if(curr ==null){
+                System.out.println(" ");
+                if(q.isEmpty()){
                     break;
                 }
-                else {
+                else{
                     q.add(null);
                 }
             }
-            else {
-                System.out.println(cur.data+" ");
-                if(cur.left!=null){
-                    q.add(cur.left);
+            else{
+                System.out.print(curr.data+" ");
+                if(curr.left !=null){
+                    q.add(curr.left);
                 }
-                if(cur.right!=null){
-                    q.add(cur.right);
+                if(curr.right !=null){
+                    q.add(curr.right);
                 }
             }
         }
