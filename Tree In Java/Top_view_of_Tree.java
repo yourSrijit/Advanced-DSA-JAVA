@@ -40,21 +40,23 @@ public class Top_view_of_Tree {
                     q.add(null);
                 }
             }
-            if(!map.containsKey(cur.hd)){
-                map.put(cur.hd,cur.node);
-            }
-            if(cur.node.left!=null){
-                map.put(cur.hd-1,cur.node.left);
-                min=Math.min(min, cur.hd-1);
+            else {
+                if (!map.containsKey(cur.hd)) {
+                    map.put(cur.hd, cur.node);
+                }
+                if (cur.node.left != null) {
+                    map.put(cur.hd - 1, cur.node.left);
+                    min = Math.min(min, cur.hd - 1);
 
-            }
-            if(cur.node.right!=null){
-                map.put(cur.hd+1,cur.node.right);
-                max=Math.max(max, cur.hd+1);
+                }
+                if (cur.node.right != null) {
+                    map.put(cur.hd + 1, cur.node.right);
+                    max = Math.max(max, cur.hd + 1);
 
-            }
-            for(int i=min;i<=max;i++){
-                System.out.println(map.get(i).data+" ");
+                }
+                for (int i = min; i <= max; i++) {
+                    System.out.println(map.get(i).data + " ");
+                }
             }
         }
 
