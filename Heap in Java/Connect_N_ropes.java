@@ -28,6 +28,5 @@ public class Connect_N_ropes {
 
     }
 }
-
 // Given are N ropes of different lengths, the task is to connect these ropes into one rope with
 // minimum cost, such that the cost to connect two ropes is equal to the sum of their lengths.
